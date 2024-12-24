@@ -1,0 +1,134 @@
+body {
+    color: #283618;
+    background-color: #FEFAE0;
+    margin: 0;
+    font-family: "Afacad Flux";
+    display: none;
+}
+
+#container {
+    z-index: 10;
+    height: auto;
+    width: auto;
+    /* CSS Grid */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows:
+    auto
+    auto
+    auto
+    auto;
+    grid-template-areas:
+       "nav nav"
+       "title title"
+       "a b"
+       "footer footer";
+}
+
+nav, #title, #a, footer {
+    z-index: 20;
+}
+
+nav {
+    grid-area: nav;
+    padding:1vh 2vw 0 0;
+    z-index: 30;
+}
+
+nav p {
+    padding: 0 1vw 0 1vw;
+    font-size: 0.5em;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: inherit;
+}
+
+nav a:visited {
+    color: inherit;
+}
+
+nav a:link {
+    color: inherit;
+}
+
+nav p:hover {
+    color: #BC6C25;
+}
+
+#a {
+    grid-area: a;
+    padding: 15vh 0 50vh 10vw;
+}
+
+#a img {
+    width: 75%;
+    border-radius: 2cap;
+}
+
+#b {
+    grid-area: b;
+    padding: 15vh 10vw 50vh 5vw;
+    font-size: 1.5em;
+    text-indent: 2vw;
+}
+#clock {
+    font-size: 2em;
+    padding:1vh 2vw 0 0;
+}
+
+#title {
+    grid-area: title;
+    font-size: 2em;
+    padding-left: 10vw;
+}
+
+#title button {
+    background-color: #DDA15E;
+    color: #FEFAE0;
+    font-size: 0.5em;
+    border: none;
+    padding: 0.4vw;
+    border-radius: 1cap;
+}
+
+#title button:hover {
+    background-color: #606C38;
+}
+
+#a {
+    grid-area: a;
+}
+
+#border {
+    border: 2px solid;
+    border-color: inherit;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #283618;
+    color: #DDA15E;
+    padding: 1.25vw
+}
+
+footer p {
+    font-size: 1.5em;
+    color: inherit;
+}
+
+footer a {
+    padding-left: 3vw;
+    font-size: 1.25em;
+    text-decoration: none;
+}
+
+footer a:visited {
+    color: #DDA15E;
+}
+
+footer img {
+    width: 6%;
+}
+

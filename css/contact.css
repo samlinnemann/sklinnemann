@@ -1,0 +1,154 @@
+body {
+    color: #283618;
+    background-color: #FEFAE0;
+    margin: 0;
+    font-family: "Afacad Flux";
+    display: none;
+}
+
+#container {
+    z-index: 10;
+    height: auto;
+    width: auto;
+    /* CSS Grid */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows:
+    auto
+    auto
+    auto
+    auto;
+    grid-template-areas:
+       "nav nav"
+       "title title"
+       "form form"
+       "footer footer";
+}
+
+nav, #title, #form, footer {
+    z-index: 20;
+}
+
+nav {
+    grid-area: nav;
+    padding:1vh 2vw 0 0;
+    z-index: 30;
+}
+
+nav p {
+    padding: 0 1vw 0 1vw;
+    font-size: 0.5em;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: inherit;
+}
+
+nav a:visited {
+    color: inherit;
+}
+
+nav a:link {
+    color: inherit;
+}
+
+nav p:hover {
+    color: #BC6C25;
+}
+
+#clock {
+    font-size: 2em;
+    padding:1vh 2vw 0 0;
+}
+
+#title {
+    grid-area: title;
+    font-size: 2em;
+    padding-left: 10vw;
+}
+
+#form {
+    grid-area: form;
+    font-size: 2em;
+    padding-top: 10vh;
+    padding-bottom: 30vh;
+}
+
+#form h3 {
+    padding: 2vw;
+    text-align: center;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: white;
+    color: black;
+    padding: 12px 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=email] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  input[type=tel] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  input[type=number] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+footer {
+    grid-area: footer;
+    background-color: #283618;
+    color: #DDA15E;
+    padding: 1.25vw
+}
+
+footer p {
+    font-size: 1.5em;
+    color: inherit;
+}
+
+footer a {
+    padding-left: 3vw;
+    font-size: 1.25em;
+    text-decoration: none;
+}
+
+footer a:visited {
+    color: #DDA15E;
+}
+
+footer img {
+    width: 6%;
+}

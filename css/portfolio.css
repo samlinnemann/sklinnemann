@@ -1,0 +1,179 @@
+body {
+    color: #283618;
+    background-color: #FEFAE0;
+    margin: 0;
+    font-family: "Afacad Flux";
+    display: none;
+}
+
+#container {
+    z-index: 10;
+    height: auto;
+    width: auto;
+    /* CSS Grid */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows:
+    auto
+    auto
+    auto
+    auto
+    auto;
+    grid-template-areas:
+       "nav nav"
+       "title title"
+       "a a"
+       "b b"
+       "footer footer";
+}
+
+nav, #title, #a, #b, footer {
+    z-index: 20;
+}
+
+nav {
+    grid-area: nav;
+    padding:1vh 2vw 0 0;
+    z-index: 30;
+}
+
+nav p {
+    padding: 0 1vw 0 1vw;
+    font-size: 0.5em;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: inherit;
+}
+
+nav a:visited {
+    color: inherit;
+}
+
+nav a:link {
+    color: inherit;
+}
+
+nav p:hover {
+    color: #BC6C25;
+}
+
+#clock {
+    font-size: 2em;
+    padding:1vh 2vw 0 0;
+}
+
+#title {
+    grid-area: title;
+    font-size: 2em;
+    padding-left: 10vw;
+}
+
+#a {
+    grid-area: a;
+    padding: 15vh 0 10vh 10vw;
+}
+
+#a h1 {
+    font-size: 4em;
+}
+
+#a p {
+    font-size: 1.5em;
+}
+
+#a a {
+    text-decoration: none;
+    background-color: inherit;
+}
+
+#a a:visited {
+    color: inherit;
+}
+
+#a a:link {
+    color: inherit;
+}
+
+#a h2 {
+    padding-right: 10vw;
+}
+
+#a img {
+    width: 20%;
+    height: 25vh;
+    border-radius: 3cap;
+}
+
+#close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: #FEFAE0;
+    cursor: pointer;
+  }
+
+#b {
+    grid-area: b;
+    padding: 15vh 0 50vh 10vw;
+}
+
+#b h1 {
+    font-size: 4em;
+}
+
+#b p {
+    font-size: 1.5em;
+}
+
+#b a {
+    text-decoration: none;
+    background-color: inherit;
+}
+
+#b a:visited {
+    color: inherit;
+}
+
+#b a:link {
+    color: inherit;
+}
+
+#b h2 {
+    padding-right: 10vw;
+}
+
+#b img {
+    width: 20%;
+    height: 25vh;
+    border-radius: 3cap;
+}
+
+
+footer {
+    grid-area: footer;
+    background-color: #283618;
+    color: #DDA15E;
+    padding: 1.25vw
+}
+
+footer p {
+    font-size: 1.5em;
+    color: inherit;
+}
+
+footer a {
+    padding-left: 3vw;
+    font-size: 1.25em;
+    text-decoration: none;
+}
+
+footer a:visited {
+    color: #DDA15E;
+}
+
+footer img {
+    width: 6%;
+}
