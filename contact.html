@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale1.0">
+        <link href="css/contact.css" rel="stylesheet"/>
+        <link href="css/classes.css" rel="stylesheet"/>
+        <title>Contact Linnemann</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    </head>
+    <body onload="spinningElement(), loadTheme(), validation()"></body>
+        <div id="container">
+            <nav>
+                <div id="egg" class="shape"></div>
+
+                <div class="right">
+                    <a href="index.html"><p>Who?</p></a>
+                    <a href="contact.html"><p>Contact</p></a>
+                    <a href="mem.html"><p>Memories</p></a>
+                    <div class="dropDown">
+                        <a href="portfolio.html"><p>Portfolio</p>
+                            <div class="dropDownContent">
+                                <a href="photos.html"><p>Photos</p></a>
+                                <a href="code.html"><p>Coding</p></a>
+                            </div>
+                    </div>
+                    </a>
+                    <a href="https://www.instagram.com/sklinnemann/" target="_blank"><p>Instagram</p></a>
+                </div>
+                <div class="right">
+                    <div class="line"></div>
+                </div>
+                <div id="clock" class="right"></div>
+            </nav>
+
+            <div id="title">
+                <h1>Contact form & quote estimation</h1>
+                <div class="left">
+                    <div class="line"></div>
+                </div>
+            </div>
+
+
+            <div id="form" class="cmiddle">
+                <form onsubmit="return returnCalc()">
+                    <div class="row">
+                        <label class="form25" for="name">First Name:</label>
+                        <input class="form75" type="text" id="fname" maxlength="50" required />
+                    </div>
+                    <div class="row">
+                        <label class="form25" for="name">Last Name:</label>
+                        <input class="form75" type="text" id="lname" maxlength="50" required />
+                    </div>
+                    <div class="row">
+                        <label for="email">Enter Email:</label>
+                        <input type="email" id="error" placeholder="e.g. a@b.com" autocomplete="off" required />
+                    </div>                    
+                    <div class="row">
+                        <label for="phoneNum">Enter Phone Number:</label>
+                        <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="e.g. 000-000-0000" autocomplete="off" required/>
+                    </div>
+                    <div class="row">
+                        <label for="description">Describe your Photo Request:</label>
+                        <textarea id="description" placeholder="Write Something..." required style="height: 200px;"></textarea>
+                    </div>
+                    <p>Or upload your own txt file</p>
+                    <div class="row">
+                        <input type="file" id="fileInput" accept=".txt">
+                        <button type="button" onclick="readFile()">Upload and Display</button>
+                    </div>
+                    <p>File:</p>
+                    <div class="row">
+                        <pre id="fileContent"></pre>
+                    </div>
+                    <div class="row">
+                        <label class="form75" for="days">Enter Estimated Number of Days</label>
+                        <input class="form75" type="number" id="days"/>
+                    </div>
+                    <div class="row">
+                        <label class="form100" for="hours">Enter Estimated Number of Hours per Day</label>
+                        <input class="form75" type="number" id="hours"/>
+                    </div>
+                    <div class="row">
+                        <label class="form100" for="format">Select Photo Type</label>
+                        <select name="format" id="format" form="formatForm">
+                            <option value="select">Select</option>
+                            <option value="option1">Wedding</option>
+                            <option value="option2">Portrait</option>
+                            <option value="option3">Event</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <label class="form100" for="add">Add new option</label>
+                        <input type="text" id="addNew" placeholder="Enter new Option"/>
+                        <button type="button" onclick="addOption()">Add option</button>
+                    </div>
+                      
+                    <input class="form25 button" type="submit" onclick="validation()"  value="Submit" />
+                </form>
+                <h3 class="cmiddle" id="output"></h3>
+            </div>
+
+            <footer class="left">
+                <p>Samuel Keon Linnemann</p>
+                <div>
+                    <a href="about.html" style="text-decoration: none;">About</a>
+                    <a href="contact.html" style="text-decoration: none;">Contact</a>
+                    <a href="about.html" style="text-decoration: none;">Portfolio</a>
+                    <a href="https://www.instagram.com/sklinnemann/" target="_blank">Instagram</a>
+                </div>
+            </footer>
+
+        <script src="javascript/contact.js"></script>
+        <script src="javascript/base.js"></script>
+        <script src="javascript/object.js"></script>
+        <script src="javascript/theme.js"></script>
+        <script src="javascript/animation.js"></script>
+        <script src="javascript/validate.js"></script>
+        </div>
+    </body>
+</html>
